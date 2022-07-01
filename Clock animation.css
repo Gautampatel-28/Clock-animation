@@ -1,0 +1,39 @@
+body{
+    background: linear-gradient(70deg,#E2EBF0,#000);
+}
+
+section{
+    padding-left: 700px;
+    padding-top: 200px;
+    position: fixed;
+}
+
+
+.clock{
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    background: linear-gradient(70deg,#000,#E2EBF0);
+    box-shadow: 10px 15px 100px #E2EBF0;
+    position: relative;
+}
+
+.clock::before{
+    content: "";
+    position: absolute;
+    height: calc(50% - 50px);
+    top: 50%;
+    left: 50%;
+    border: 1px solid #fff;
+    transform-origin: 100% 0%;
+    animation: clock 60s infinite steps(60);
+}
+
+@keyframes clock{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
